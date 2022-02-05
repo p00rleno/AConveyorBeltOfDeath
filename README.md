@@ -48,3 +48,9 @@ I'm omitting things that are very straightfoward. Most options in the UI have ho
 "Cooldown" - Max response frequency across all users
 
 "User cooldown" - Max response frequency for any given user
+
+
+
+# License
+
+This work is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License. See https://creativecommons.org/licenses/by-sa/4.0/ for licensing terms
