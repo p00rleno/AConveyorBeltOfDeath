@@ -1,0 +1,280 @@
+﻿{
+    "output_file": "QueueBotSettings.json",
+    "drawNow": {
+        "type": "button",
+        "label": "Pick someone!",
+        "tooltip": "Draws a user from the queue.",
+        "function": "process_draw",
+        "wsevent": "",
+        "group": ""
+    },
+    "CommandDraw": {
+        "type": "textbox",
+        "value": "!rollqueue",
+        "label": "Command",
+        "tooltip": "Name of the Command",
+        "group": "Draw Command"
+    },
+    "PermissionDraw": {
+        "type": "dropdown",
+        "value": "Streamer",
+        "items": ["Streamer"],
+        "label": "Permission level",
+        "tooltip": "Set the permission level for the command",
+        "group": "Draw Command"
+    },
+    "ResponseDraw": {
+        "type": "textbox",
+        "value": "{name} : Hold fast or expire, your time has come!",
+        "label": "Response",
+        "tooltip": "Parameters available: {name} (winner), {t_tickets} (total tickets), {u_tickets} (winner tickets), {t_entries} (total redemptions), {u_entries} (winner redemptions), {t_usercount} (total entrants)",
+        "group": "Draw Command"
+    },
+    "CommandUser": {
+        "type": "textbox",
+        "value": "!queue",
+        "label": "Command",
+        "tooltip": "Name of the Command",
+        "group": "User Command"
+    },
+    "PermissionUser": {
+        "type": "dropdown",
+        "value": "Everyone",
+        "items": ["Everyone","Regular","Subscriber","Moderator"],
+        "label": "Permission level (Get own entries)",
+        "tooltip": "Set the permission level for the command",
+        "group": "User Command"
+    },
+    "PermissionUserOther": {
+        "type": "dropdown",
+        "value": "Moderator",
+        "items": ["Everyone","Regular","Subscriber","Moderator"],
+        "label": "Permission level (Get someone else's entries)",
+        "tooltip": "Set the permission level for the command",
+        "group": "User Command"
+    },
+    "ResponseUser": {
+        "type": "textbox",
+        "value": "{name} : You currently have {u_tickets} ticket{pluralTickets} from {u_entries} channel point redemption{pluralEntries}",
+        "label": "Response (Own entries)",
+        "tooltip": "Parameters available:  {name} (user queried), {t_tickets} (total tickets), {u_tickets} (user tickets), {t_entries} (total redemptions), {u_entries} (user redemptions), {t_usercount} (total entrants), {pluralTickets} (Plurality 's' for tickets), {pluralEntries} (Plurality 's' for redemptions)",
+        "group": "User Command"
+    },
+    "ResponseUserOther": {
+        "type": "textbox",
+        "value": "{senderName} : {name} currently has {u_tickets} ticket{pluralTickets} from {u_entries} channel point redemption{pluralEntries}",
+        "label": "Response (Others entries)",
+        "tooltip": "Parameters available:  {senderName} (user sending request), {name} (user queried), {t_tickets} (total tickets), {u_tickets} (user tickets), {t_entries} (total redemptions), {u_entries} (user redemptions), {t_usercount} (total entrants), {pluralTickets} (Plurality 's' for tickets), {pluralEntries} (Plurality 's' for redemptions)",
+        "group": "User Command"
+    },
+    "CooldownUser": {
+        "type":"numberbox",
+        "label":"Cooldown (seconds, get own entries)",
+        "value":5,
+        "tooltip":"Cooldown in seconds",
+        "group":"User Command"
+    },
+    "CooldownUserIndividual": {
+        "type":"numberbox",
+        "label":"User cooldown (seconds, get own entries)",
+        "value":60,
+        "tooltip":"User cooldown in seconds",
+        "group":"User Command"
+    },
+    "CommandQueue": {
+        "type": "textbox",
+        "value": "!queuestats",
+        "label": "Command (Get queue stats)",
+        "tooltip": "Name of the Command",
+        "group": "Queue Command"
+    },
+    "PermissionQueue": {
+        "type": "dropdown",
+        "value": "Regular",
+        "items": ["Everyone","Regular","Subscriber","Moderator"],
+        "label": "Permission level (Get queue stats)",
+        "tooltip": "Set the permission level for the command",
+        "group": "Queue Command"
+    },
+    "ResponseQueue": {
+        "type": "textbox",
+        "value": "{name} : there are presently {t_tickets} tickets across {t_entries} redemptions from {t_usercount} distinct viewers.",
+        "label": "Response",
+        "tooltip": "Parameters available:  {name} (user queried), {t_tickets} (total tickets), {t_entries} (total redemptions), {t_usercount} (total entrants), {pluralTickets} (Plurality 's' for tickets), {pluralEntries} (Plurality 's' for redemptions)",
+        "group": "Queue Command"
+    },
+	"CooldownQueue": {
+        "type":"numberbox",
+        "label":"Cooldown (seconds, get queue stats, global)",
+        "value":30,
+        "tooltip":"Cooldown in seconds",
+        "group":"Queue Command"
+    },
+    "RewardName": {
+        "type": "textbox",
+        "value": "Purchase Queue Ticket",
+        "label": "Reward 1 Name",
+        "tooltip": "C. Point Reward Name",
+        "group": "Redemption Settings"
+    },
+    "RewardValue1": {
+        "type": "numberbox",
+        "value": 1,
+        "label": "Reward 1 Value",
+        "tooltip": "Number of entries Reward 1 counts as",
+        "group": "Redemption Settings"
+    },
+    "RewardName2": {
+        "type": "textbox",
+        "value": "RimWorld Queue (3 Entries)",
+        "label": "Reward 2 Name",
+        "tooltip": "C. Point Reward Name",
+        "group": "Redemption Settings"
+    },
+    "RewardValue2": {
+        "type": "numberbox",
+        "value": 3,
+        "label": "Reward 2 Value",
+        "tooltip": "Number of entries Reward 2 counts as",
+        "group": "Redemption Settings"
+    },
+	"RewardEnable2": {
+        "type": "checkbox",
+        "value": false,
+        "label": "Enable 2nd Redemption",
+        "tooltip": "Check this to use a second redemption",
+        "group": "Redemption Settings"
+	},
+    "RewardName3": {
+        "type": "textbox",
+        "value": "RimWorld Queue (5 Entries)",
+        "label": "Reward 3 Name",
+        "tooltip": "C. Point Reward Name",
+        "group": "Redemption Settings"
+    },
+    "RewardValue3": {
+        "type": "numberbox",
+        "value": 5,
+        "label": "Reward 3 Value",
+        "tooltip": "Number of entries Reward 3 counts as",
+        "group": "Redemption Settings"
+    },
+	"RewardEnable3": {
+        "type": "checkbox",
+        "value": false,
+        "label": "Enable 3rd Redemption",
+        "tooltip": "Check this to use a third redemption",
+        "group": "Redemption Settings"
+	},
+    "appID": {
+        "type": "textbox",
+        "value": "",
+        "label": "Dev.twitch.tv AppID",
+        "tooltip": "Get this from the dev portal",
+        "group": "App Settings (Initial setup here!)"
+    },
+    "appSecret": {
+        "type": "textbox",
+        "value": "",
+        "label": "Dev.twitch.tv App Secret",
+        "tooltip": "Get this from the dev portal",
+        "group": "App Settings (Initial setup here!)"
+    },
+    "webserverPort": {
+        "type": "textbox",
+        "value": "http://localhost:17563",
+        "label": "Dev.twitch.tv OAuth Redirect URL",
+        "tooltip": "MUST match the dev portal exactly. MUST start with http://localhost: Don't change this unless you have a good reason to!",
+        "group": "App Settings (Initial setup here!)"
+    },
+    "Python3Path": {
+        "type": "textbox",
+        "value": "%appdata%\\..\\Local\\Programs\\Python\\Python39\\",
+        "label": "Python 3 'python.exe' directory. Must be at least V3.9",
+        "tooltip": "Default is usually right. Google if you can't find it. Streamlabs Chatbot still needs Python 2.7",
+        "group": "App Settings (Initial setup here!)"
+    },
+	"installDependencies": {
+        "type": "button",
+        "label": "One-time setup - save settings first!",
+        "tooltip": "Installs the twitch API for Python3",
+        "function": "perform_py3_setup",
+        "wsevent": "",
+        "group": "App Settings (Initial setup here!)"
+    },
+    "APIFrequency": {
+		"type": "slider",
+		"label": "API Refresh Frequency",
+		"value": 60,
+		"min": 30,
+		"max": 340,
+		"ticks": 5,
+		"tooltip": "",
+        "group": "App Settings (Initial setup here!)"
+    },
+    "PurgeAll": {
+        "type": "checkbox",
+        "value": true,
+        "label": "Clear all winner entries",
+        "tooltip": "Fulfill ALL queue entries for a given user when they win",
+        "group": "Queue Settings"
+    },
+    "TicketsPerDay": {
+        "type": "textbox",
+        "value": "1",
+        "label": "Ticket growth per day, 0 for disabled",
+        "tooltip": "How fast do tickets grow? 0 means one is only worth one, ever. +1 every other day is 0.5, once a week would be 0.143 (1/7)",
+        "group": "Queue Settings"
+    },
+    "PurgeOld": {
+        "type": "checkbox",
+        "value": false,
+        "label": "Refund old entries",
+        "tooltip": "Reject any redemption whose age is greater than a threshold",
+        "group": "Queue Settings"
+    },
+	"OldAgeLimit": {
+        "type":"numberbox",
+        "label":"Max entry age before purge",
+        "value":30,
+        "tooltip":"Days after which a redemption will be rejected",
+        "group":"Queue Settings"
+    },
+	"UseViewerList": {
+        "type": "checkbox",
+        "value": false,
+        "label": "Use Viewer List - Enables next two settings",
+        "tooltip": "Enable Viewer Preference module",
+        "group": "Queue Settings"
+	},
+	"DrawViewersOnly": {
+        "type": "checkbox",
+        "value": false,
+        "label": "ONLY pick viewers",
+        "tooltip": "Check this to exclude non-viewers from selection",
+        "group": "Queue Settings"
+	},
+    "ViewerAdvantageFactor": {
+        "type": "textbox",
+        "value": "1.0",
+        "label": "Viewer Advantage Factor",
+        "tooltip": "If viewer list is enabled, and not on Viewers Only, viewer entries will be multiplied by this amount. This multiplication will NOT be displayed in stats.",
+        "group": "Queue Settings"
+    },
+	"BlockDuplicates": {
+        "type": "checkbox",
+        "value": true,
+        "label": "Restrict duplicate selection",
+        "tooltip": "Check this to maintain a list of those already selected, and skip them from being picked again",
+        "group": "Queue Settings"
+	},
+	"ClearDuplicateList": {
+        "type": "button",
+        "label": "Clear Used Name List",
+        "tooltip": "Clear the list of duplciate names for the above setting",
+        "function": "clear_used_name_list",
+        "wsevent": "",
+        "group": "Queue Settings"
+    }
+	
+}
