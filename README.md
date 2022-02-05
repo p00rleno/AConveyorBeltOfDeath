@@ -8,7 +8,7 @@ This is a squirrley little thing. It was developed with one person in mind, and 
 1. Install Python 3.9 or newer from https://www.python.org/downloads/release/python-390/
 2. Perform initial Streamlabs Chatbot Desktop setup for the Scripts tab, as documented here: https://streamlabs.com/content-hub/post/chatbot-scripts-desktop
 3. Go to https://dev.twitch.tv , access your console, and create a new application. Take note of the Client ID and Client Secret. Set the OAuth Redirect URL to http://localhost:17563
-4. Import the chatbot script to SLCB, but don't enable it. First, perform initial set up of the options. You must fill out the AppID and Secret on the "App Settings" tab, then click the "One-Time Setup" button (FYI: This button runs "pip install twitchAPI" in your python 3 installation.)
+4. Download the script from GitHub as a .ZIP file. Import the chatbot script to SLCB, but don't enable it. First, perform initial set up of the options. You must fill out the AppID and Secret on the "App Settings" tab, then click the "One-Time Setup" button (FYI: This button runs "pip install twitchAPI" in your python 3 installation.)
 5. Set up other settings under their tabs. Note that this script MUST create the Channel point rewards FOR YOU, and will attempt to do so the first time you start it. If they are set up in the Twitch Dashboard, it will not work! This is a Twitch imposed limitation. You can edit all parameters of the reward after the script creates it, though changing the name will require you change the name in the script settings as well. Make sure to save settings using the button at the bottom.
 6. Play around from here!
 
